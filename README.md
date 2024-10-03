@@ -4,6 +4,8 @@
 [![Version](https://img.shields.io/jetbrains/plugin/v/16299.svg)](https://plugins.jetbrains.com/plugin/16299)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/16299.svg)](https://plugins.jetbrains.com/plugin/16299)
 
+> Fork from https://github.com/JetBrains/intellij-platform-plugin-template (root source)
+
 ## Description
 <!-- Plugin description -->
 This plugin addresses missing functionality when working with Dart/Flutter, specifically the pain of creating tests in a package structure that reflects the implementation code.
