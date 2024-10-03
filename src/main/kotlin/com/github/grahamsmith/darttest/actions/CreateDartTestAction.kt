@@ -46,6 +46,17 @@ class CreateDartTestAction : CreateFileFromTemplateAction(
         }
 
         val className = FileUtilRt.getNameWithoutExtension(name!!)
+        // 如果 name 為空值，則使用目前所在目錄的檔名作為測試檔的預設名稱
+//        val className = if (name.isNullOrEmpty()) {
+//            // 使用目錄名稱作為 class name
+//            val currentFile = PsiManager.getInstance(dir.project).findFile(dir.virtualFile)
+//            currentFile?.virtualFile?.nameWithoutExtension ?: throw IllegalArgumentException("Unable to determine default file name")
+//        } else {
+//            FileUtilRt.getNameWithoutExtension(name)
+//        }
+//        val currentFile = PsiManager.getInstance(dir.project).findFile(dir.virtualFile)
+//        val className = currentFile?.virtualFile?.nameWithoutExtension ?: throw IllegalArgumentException("Unable to determine default file name")
+
         val project = dir.project
 
         val projectPath = ProjectFileIndex.getInstance(project).getContentRootForFile(dir.virtualFile)
